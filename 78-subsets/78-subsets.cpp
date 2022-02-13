@@ -1,9 +1,12 @@
 class Solution {
 public:
+    //power set
     vector<vector<int>> subsets(vector<int>& nums) 
     {
         vector<vector<int>>v;
+        
         int n = nums.size();
+        
         int ps = pow(2,n); //power_set_size
         
         for(int i=0;i<ps;i++)
@@ -16,6 +19,7 @@ public:
             }
             v.push_back(vv);
         }
+        
         return v;
     }
 };
