@@ -1,27 +1,25 @@
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) 
+    int removeDuplicates(vector<int>& arr) 
     {
-        set<int> s;
         
-        for (int i = 0; i < nums.size(); i++)
+        int n = arr.size();
+        int i = 0, j = 1;
+        
+        while(j<n)
         {
-          /* code */
-          s.insert(nums[i]);
-          
+            if(arr[i]<arr[j])
+            {
+                i++;
+                arr[i] = arr[j];
+                // for(int i=0;i<n;i++)
+                // {
+                //     cout<<arr[i]<<" ";
+                // }
+                // cout<<endl;
+            }
+          j++;
         }
-        nums.clear();
-         set<int, greater<int> >::iterator itr;
-        for (itr = s.begin(); itr != s.end(); itr++) 
-        {
-       nums.push_back(*itr);
-         }
-//           for (int i = 0; i < s.size(); i++)
-//         {
-//           /* code */
-//          nums[i] = s[i];
-          
-//         }
-        return s.size();
+        return i+1;
     }
 };
