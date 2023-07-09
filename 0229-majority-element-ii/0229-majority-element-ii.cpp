@@ -2,18 +2,35 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums)
     {
-        int n = nums.size();
+        // int n = nums.size();
+        // map<int,int>mp;
+        // for(int i=0;i<nums.size();i++)
+        // {
+        //     mp[nums[i]]++;
+        // }
+        // vector<int>v;
+        // for(auto x : mp)
+        // {
+        //     if(x.second>n/3)
+        //         v.push_back(x.first);
+        // }
+        // return v;
+        
+        
         map<int,int>mp;
+        int n = nums.size();
         for(int i=0;i<nums.size();i++)
         {
-            mp[nums[i]]++;
+             mp[nums[i]]++;
         }
         vector<int>v;
         for(auto x : mp)
         {
             if(x.second>n/3)
+            {
                 v.push_back(x.first);
+            }
         }
-        return v;
+        return v ;
     }
 };
