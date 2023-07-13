@@ -7,7 +7,6 @@ public:
         int c=matrix[0][n-1];
         int i=0,j=n-1;
         while(i<m && j>=0)
-            
         {
          if(matrix[i][j]>x)
          {
