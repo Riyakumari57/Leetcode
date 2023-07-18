@@ -9,7 +9,7 @@ var expect = function(val) {
             if(val===val1) {
                 return true;
             }
-            throw new Error("Not Equal");
+            throw  Error("Not Equal");
         },
         
         notToBe : function(val2)
